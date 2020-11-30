@@ -1,0 +1,65 @@
+﻿<Window x:Class="Stein_Papier_Schere.Page.OptionsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Stein_Papier_Schere.Page"
+        mc:Ignorable="d"
+        Title="Optionen" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="43,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Name="nameBox"/>
+        <ComboBox HorizontalAlignment="Left" Margin="312,47,0,0" VerticalAlignment="Top" Width="120" Name="listOfAllRaws_add">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <Label Content="{Binding name}"></Label>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Button Content="Hinzufügen" HorizontalAlignment="Left" Margin="456,47,0,0" VerticalAlignment="Top" Width="75" Name="addButton" Click="AddButton_OnClick"/>
+        <Label Content="Hinzufügen" HorizontalAlignment="Left" Margin="43,16,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <ComboBox HorizontalAlignment="Left" Margin="43,106,0,0" VerticalAlignment="Top" Width="120" x:Name="listOfAllRaws_delete">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <Label Content="{Binding name}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Button Content="Entfernen" HorizontalAlignment="Left" Margin="188,109,0,0" VerticalAlignment="Top" Width="75" x:Name="deleteButton" Click="DeleteButton_OnClick"/>
+        <Label Content="Entfernen" HorizontalAlignment="Left" Margin="43,75,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Bearbeiten" HorizontalAlignment="Left" Margin="43,141,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <ComboBox HorizontalAlignment="Left" Margin="43,172,0,0" VerticalAlignment="Top" Width="120" x:Name="listOfAllRaws_winsAgainst" SelectionChanged="ListOfAllRaws_winsAgainst_OnSelectionChanged">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <Label Content="{Binding name}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="43,206,0,0" VerticalAlignment="Top" Width="120" x:Name="listOfAllRaws_loosesAgainst" SelectionChanged="ListOfAllRaws_loosesAgainst_OnSelectionChanged">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <Label Content="{Binding name}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Label Content="soll gewinnen gegen" HorizontalAlignment="Left" Margin="180,172,0,0" VerticalAlignment="Top"/>
+        <Label Content="gewinnt aktuell gegen" HorizontalAlignment="Left" Margin="179,203,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="312,172,0,0" VerticalAlignment="Top" Width="120" x:Name="listOfAllRaws_winsAgainst_2">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <Label Content="{Binding name}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="312,206,0,0" VerticalAlignment="Top" Width="120" x:Name="listOfAllRaws_loosesAgainst_2">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <Label Content="{Binding name}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Button Content="Hinzufügen" HorizontalAlignment="Left" Margin="456,172,0,0" VerticalAlignment="Top" Width="75" x:Name="winsButton" Click="WinsButton_OnClick"/>
+        <Button Content="Entfernen" HorizontalAlignment="Left" Margin="456,206,0,0" VerticalAlignment="Top" Width="75" x:Name="loosesButton" Click="LoosesButton_OnClick"/>
+        <Label Content="soll gewinnen gegen" HorizontalAlignment="Left" Margin="179,47,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

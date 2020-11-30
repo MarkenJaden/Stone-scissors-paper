@@ -1,0 +1,25 @@
+﻿<Window x:Class="Stein_Papier_Schere.Page.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Stein_Papier_Schere.Page"
+        mc:Ignorable="d"
+        Title="Spiel" Height="450" Width="800">
+    <Grid>
+        <ListView Name="rawsToPlay" Height="223" VerticalAlignment="Top" Margin="0,0,-0.4,0" MouseDoubleClick="RawsToPlay_OnMouseDoubleClick">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Label Content="{Binding name}"></Label>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Label Name="opponentName" HorizontalAlignment="Left" Margin="368,330,0,0" VerticalAlignment="Top" Width="67"/>
+        <Label Name="winLabel" Content="Gewonnen" HorizontalAlignment="Left" Margin="368,345,0,0" VerticalAlignment="Top" Opacity="0"/>
+        <Button Name="stopButton" Click="StopButton_OnClick" Content="Beenden" HorizontalAlignment="Left" Margin="709,391,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Name="winsLabel"  Content="Gewonnen: 0" HorizontalAlignment="Left" Margin="609,388,0,0" VerticalAlignment="Top" Width="95"/>
+        <Label Name="loosesLabel" Content="Verloren: 0" HorizontalAlignment="Left" Margin="524,388,0,0" VerticalAlignment="Top"/>
+        <Label Name="roundsLabel" Content="Runden: 0" HorizontalAlignment="Left" Margin="448,388,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
